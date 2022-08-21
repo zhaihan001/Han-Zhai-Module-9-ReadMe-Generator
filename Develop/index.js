@@ -17,7 +17,7 @@ const questions = [
     {
         type:'input',
         message: 'Please provide installation instructions',
-        name:'instruction',
+        name:'installation',
     },    
     {
         type:'input',
@@ -52,9 +52,61 @@ const questions = [
     },
 ];
 
+const generateFile = ({title, description, installation, usage, contribution, test, license, username, email })=>
+`# ${title}
+
+## Description
+
+${description}
+
+## Table of Contents
+
+- [Badges](#badges)
+- [Installation Instruction](#installation-instruction)
+- [Usage](#usage)
+- [How to Contribute](#how-to-contribute)
+- [License](#license)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Badges
+
+![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
+
+Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+
+
+## Installation Instruction
+
+${installation}
+
+## Usage
+
+${usage}
+
+## How to Contribute
+
+${contribution}
+
+## License
+
+${license}
+
+## Tests
+
+${test}
+
+## Questions
+
+My Github profile: https://github.com/${username}
+
+Please feel free reach me out with additional questions.
+My Email Address is: ${email}`
+
+
 // Create a function to write README file
 function writeToFile(data) {
-    fs.writeFile("README.md", JSON.stringify(data, null, '\t'), (err) =>
+    fs.writeFile("README.md", generateFile(data), (err) =>
       err ? console.log(err) : console.log('README file created')
     );
 }
