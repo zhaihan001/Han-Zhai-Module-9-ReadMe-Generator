@@ -1,10 +1,8 @@
-// TODO: Include packages needed for this application
+// Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const generateMarkdown = require('generateMarkdown');
 
-
-// TODO: Create an array of questions for user input
+// Create an array of questions for user input
 const questions = [
     {
         type:'input',
@@ -40,21 +38,32 @@ const questions = [
         type: 'list',
         message: 'Please choose a license',
         name: 'license',
-        choices: ['email', 'phone', 'telekinesis'],
+        choices: ['MIT', 'ISC'],
     },
-
+    {
+        type:'input',
+        message: 'Please enter your Gibhub username',
+        name:'username',
+    },
+    {
+        type:'input',
+        message: 'Please enter your email address',
+        name:'email',
+    },
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fileName = "README.md"
-    fs.writeFile(fileName, JSON.stringify(data, null, '\t'), (err) =>
-      err ? console.log(err) : console.log('README Created')
+// Create a function to write README file
+function writeToFile(data) {
+    fs.writeFile("README.md", JSON.stringify(data, null, '\t'), (err) =>
+      err ? console.log(err) : console.log('README file created')
     );
 }
 
-// TODO: Create a function to initialize app
-function init() {}
+// Create a function to initialize app
+function init() {
+    inquirer.prompt(questions)
+    .then((response) => writeToFile(response));
+}
 
 // Function call to initialize app
 init();
