@@ -1,6 +1,7 @@
 # Han Zhai-Module9 ReadMe Generator
 
 ## Walk through video
+https://drive.google.com/file/d/1o97i9ax0Sn5B83Fi-vDrocgKnBnaOYyc/view
 
 ## Acceptance Criteria
 GIVEN a command-line application that accepts user input
