@@ -124,6 +124,9 @@ ${installation}
 ## Usage
 
 ${usage}
+md
+![alt text](./screenshot.JPG)
+
 
 ## How to Contribute
 
