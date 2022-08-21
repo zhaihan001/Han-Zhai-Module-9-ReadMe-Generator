@@ -1,8 +1,8 @@
-# rth
+# README File Generator
 
 ## Description
 
-rhsjt
+I want to build an application that generates professional README file with given information. This is a good opportunity to practice how node js work. I also learned how to use npm, inquirer, template literals, and fs.writefiles.
 
 ## Table of Contents
 
@@ -34,18 +34,18 @@ ISC License
 
 ## Installation Instruction
 
-jryt
+The application requires to install node modules inquirer. Run command "npm init -y" to install npm packages. Then run "npm i inquirer@8.2.4" to install inquier module with version 8.2.4
 
 ## Usage
 
-jhry
+Enter the answers in the prompt. Then a README file will be created
 md
 ![alt text](./screenshot.JPG)
 
 
 ## How to Contribute
 
-jyrdt
+The application is accessible from my Github profile
 
 ## License
 
@@ -53,11 +53,11 @@ ISC
 
 ## Tests
 
-jhsr
+Make sure the file is generated and no error message shows in terminal
 
 ## Questions
 
-My Github profile: https://github.com/srjt
+My Github profile: https://github.com/zhaihan001
 
 Please feel free reach me with additional questions.
-My Email Address is: jrsd
+My Email Address is: zhaihan001@gmail.com
